@@ -1,0 +1,181 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}Детальная страница тоавра {{ product.name }}{% endblock %}
+
+{% block content %}
+<section class="shop-path-line">
+    <div class="container">
+        <div class="path-line"></div>
+    </div>
+</section>
+<!-- <section class="shop-content">
+    <div class="container" style="padding: 0;">
+        <div class="row">
+            <div class="col-lg-2" style="padding-right: 0;
+                                        padding-left: 50px;">
+                <div class="product-all-imgs">
+                    <div class="product-more-img">
+                        <img src="img/moto-1.jpg" alt="">
+                    </div>
+                    <div class="product-more-img">
+                        <img src="img/moto-2.jpg" alt="">
+                    </div>
+                    <div class="product-more-img">
+                        <img src="img/moto-3.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-10">
+                <div class="product-content">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="product-imgs">
+                                <div class="product-main-img">
+                                    <img src="{{ product.image.url }}" alt="">
+                                </div>
+                                <!--<div class="product-all-imgs">
+                                    <div class="row">
+                                        <div class="col-lg-4">
+                                            <div class="product-more-img">
+                                                <img src="img/cart-photo.jpg" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="product-more-img">
+                                                <img src="img/cart-photo.jpg" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="product-more-img">
+                                                <img src="img/cart-photo.jpg" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="product-inf">
+                                <h4>{{ product.name }}</h4>
+                                <h3><strong>{{ product.price }} руб.</strong></h3>
+                                <!-- <h5 class="prod-availability"> 
+                                    {% if product.availability == 1 %}
+                                    <h5 class="prod-availability">в наличии</h5>
+                                    {% else %}
+                                    <h5 class="prod-availability" style="color: grey">нет в наличии</h5>
+                                    {% endif %}
+                                <!-- </h5>
+                                <p>
+                                   {{ product.description }}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        {% if product.category.slug == 'mopeds' or product.category.slug == 'scooters' or product.category.slug == 'quadbikes' or product.category.slug == 'pitbikes' or product.category.slug == 'crosstechiniques' %}
+                            {% include 'moto-specifications.html' %}
+                        {% endif %}
+                        <div class="row">
+                            <div class="additional_information">
+                                <h6>* для получения более подробной информацией <a href="#">свяжитесь с нами</a></h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> -->
+
+
+<section class="shop-content">
+    <div class="container" style="padding: 0;">
+        <div class="row d-flex">
+            <div class="order-lg-0 order-md-1 order-sm-1 order-1 col-lg-7">
+                <div class="row d-flex">
+                    <div class="order-lg-0 order-md-0 order-sm-1 order-1 col-lg-3 col-md-3 col-sm-12 col-12" style="padding-left: 0;">
+                        <div class="product-all-imgs">
+                            <div class="product-more-img">
+                                <img src="{{ product.image.url }}" class="detail-img">
+                            </div>
+
+
+                            <!-- {% for image in product.images %}
+                            <div class="product-more-img">
+                                <img src="{{ product.image.url }}" class="detail-img">
+                            </div>
+                            {% endfor %} -->
+
+
+                            <!-- <div class="product-more-img">
+                                <img src="{% static 'img/moto-2.jpg' %}" class="detail-img">
+                            </div>
+                            <div class="product-more-img">
+                                <img src="{% static 'img/moto-3.jpg' %}" class="detail-img">
+                            </div>
+                            <div class="product-more-img">
+                                <img src="{% static 'img/moto-3.jpg' %}" class="detail-img">
+                            </div> -->
+                        </div>
+                    </div>
+                    <div class="order-lg-1 order-md-1 order-sm-0 order-0 col-lg-9 col-md-9 col-sm-12 col-12" style="padding-left: 0;">
+                        <!-- <div class="product-imgs"> -->
+                            <div class="product-main-img">
+                                <div class="product-main-img-item">
+                                    <img src="{{ product.image.url }}" class="product-primary-img">
+                                </div>
+                                <!-- <div class="product-main-img-item">
+                                    <img src="img/moto-2.jpg" alt="2" class="detail-img">
+                                </div>
+                                <div class="product-main-img-item">
+                                    <img src="img/moto-3.jpg" alt="3" class="detail-img">
+                                </div>
+                                <div class="product-main-img-item">
+                                    <img src="img/moto-3.jpg" alt="4" class="detail-img">
+                                </div> -->
+                            </div>
+                        <!-- </div> -->
+                    </div>
+                </div>
+            </div>
+            <div class="order-lg-1 order-md-0 order-sm-0 order-0 col-lg-5">
+                <div class="row">
+                    <div class="product-inf">
+                        <h4>{{ product.name }}</h4>
+                        <h3><strong>{{ product.price }} руб.</strong></h3>
+                        <h5 class="prod-availability">
+                            {% if product.availability == 1 %}
+                            <h5 class="prod-availability">Есть в наличии</h5>
+                            {% else %}
+                            <h5 class="prod-availability" style="color: grey">Нет в наличии</h5>
+                            {% endif %}
+                        </h5>
+                        </h5>
+                        <p>
+                            {{ product.description }}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% if product.category.slug == 'mopeds' or product.category.slug == 'scooters' or product.category.slug == 'quadbikes' or product.category.slug == 'pitbikes' or product.category.slug == 'crosstechiniques' %}
+    {% include 'moto-specifications.html' %}
+{% endif %}
+
+<div class="container">
+    <div class="row">
+        <div class="additional_information">
+            <h6>* для получения более подробной информацией <a href="#">свяжитесь с нами</a>
+            </h6>
+        </div>
+    </div>
+</div>
+
+<script src="{% static 'js/libs/slick/slick.min.js' %}"></script>
+<script src="{% static 'js/slider-previews.js' %}"></script>
+{% endblock %}

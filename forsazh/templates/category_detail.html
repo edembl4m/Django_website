@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+
+{% block title %}Категория {% endblock %}
+
+{% block content %}
+
+<section class="shop-path-line">
+    <div class="container">
+        <div class="path-line"></div>
+    </div>
+</section>
+<section class="shop-content">
+    <div class="container" style="padding: 0;">
+        <div class="row">
+            <div class="col-lg-2">
+                <div class="shop-content-categories sticky-top">
+                    <div class="shop-cat-head">
+                        <h3>Категории</h3>
+                    </div>
+                    <div class="shop-cat-list">
+                        <ul>
+                            <li>Мотоциклы</li>
+                            <li>Скутеры</li>
+                            <li>Питбайки</li>
+                            <li>Мопеды</li>
+                            <li>Квадроциклы</li>
+                            <li>Велосипеды</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-10">
+                <div class="row shop-content-title">
+                    <h2>{{ category.name }}</h2>
+                </div>
+                <div class="row">
+                    {% for product in category_products %}
+                    <div class="col-lg-4 col-md-6">
+                        <div class="product-cart">
+                            <div class="cart-title">
+                                <h6><strong>{{ product.name }}</strong></h6>
+                            </div>
+                            <!--<div class="cart-not-available">
+                                <p>нет в наличии</p>
+                            </div>-->
+                            <div class="cart-img">
+                                <img src="{{ product.image.url }}" alt="1">
+                            </div>
+                            <div class="cart-price">
+                                <h5><strong>{{ product.price }}руб.</strong></h5>
+                            </div>
+                            <div class="cart-inf">
+                                <h6>информация</h6>
+                            </div>
+                            <a href="{{ product.get_absolut_url }}">
+                                <div class="btn">Подробнее</div>
+                            </a>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="paginationts">
+    {% include 'include/pagination.html' %}
+</div>
+
+{% endblock %}

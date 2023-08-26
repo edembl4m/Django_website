@@ -1,0 +1,209 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}Главная страница{% endblock %}
+
+{% block content %}
+
+        <style>
+            body {
+            background-image: url("{% static 'img/background-head-222.jpg' %}");
+            background-repeat: no-repeat;
+            }
+        </style>
+
+          <section class="category-navbar">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-2 col-md-4 col-sm-6">
+              <a href="#">
+                <div class="category-item">Мопеды</div>
+              </a>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-6">
+              <a href="#">
+                <div class="category-item">Скутеры</div>
+              </a>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-6">
+              <a href="#">
+                <div class="category-item">Квадроциклы</div>
+              </a>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-6">
+              <a href="#">
+                <div class="category-item">Питбайки</div>
+              </a>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-6">
+              <a href="#">
+                <div class="category-item">Кроссовая тех.</div>
+              </a>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-6">
+              <a href="#">
+                <div class="category-item">Велосипеды</div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="container">
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner">
+            <!--<div class="slider-title">
+              <ul>
+                <li>Скутеры</li>
+                <li>Мотоциклы</li>
+                <li>Запчасти</li>
+                <li>Масла</li>
+                <li>Смазка</li>
+                <li>Аксессуары</li>
+              </ul>
+            </div>-->
+            <div class="carousel-item active">
+              <img src="{% static 'img/slider-4.jpg' %}" class="d-block w-100" alt="1">
+            </div>
+            <div class="carousel-item">
+              <img src="{% static 'img/slider-4.jpg' %}" class="d-block w-100" alt="2">
+            </div>
+            <div class="carousel-item">
+              <img src="{% static 'img/slider-4.jpg' %}" class="d-block w-100" alt="...">
+            </div>
+            <h3>hello</h3>
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+
+    <section class="about-us">
+      <div class="container">
+        <div class="row">
+          <div class="row">
+            <h2><strong>О нас</strong></h2>
+          </div>
+          <div class="row">
+            <p>
+              Мото-вело центр Форсаж находится в г. Бахчисарай по ул. Македонского 11.
+              На протяжении 15 лет магазин занимается продажей мото-вело техники и запчастей к ним.
+              А так же занимается ремонтом и обслуживанием техники.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- <section class="categories">
+      <div class="container">
+        <div class="row">
+          <div class="row">
+            <h2><strong>Категории</strong></h2>
+          </div>
+          <div class="row">
+            <div class="col-lg-4 col-md-6 col-sm-6">
+              <div class="categories-card">
+                <h3>Мотоциклы</h3>
+                <img src="{% static 'img/motocicle.jpg' %}" alt="11">
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6">
+              <div class="categories-card">
+                <h3>Мопеды</h3>
+                <img src="{% static 'img/moped.jpg' %}" alt="12">
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6">
+              <div class="categories-card">
+                <h3>Скутеры</h3>
+                <img src="{% static 'img/scooter.jpg' %}" alt="13">
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6">
+              <div class="categories-card">
+                <h3>Питбайки</h3>
+                <img src="{% static 'img/pitbike.jpg' %}" alt="14">
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6">
+              <div class="categories-card">
+                <h3>Квадроциклы</h3>
+                <img src="{% static 'img/quadrocicle.jpg' %}" alt="15">
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6">
+              <div class="categories-card">
+                <h3>Велосипеды</h3>
+                <img src="{% static 'img/bike.jpg' %}" alt="16">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+    <section class="contacts" name="contact">
+      <div class="container">
+        <div class="row">
+          <div class="row">
+            <h2 id="contact"><strong>Контакты</strong></h2>
+          </div>
+          <div class="row" style="margin-bottom: 50px;">
+            <div class="col-lg-4">
+              <div class="row">
+                <div class="col-2">
+                  <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div class="col-10">
+                  <div class="contacts-box">
+                    <h4><strong>Адрес:</strong></h4>
+                    <h4>г. Бахчисарай ул. Македонского 11</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="row">
+                <div class="col-2">
+                  <i class="fas fa-phone"></i>
+                </div>
+                <div class="col-10">
+                  <div class="contacts-box">
+                    <h4><strong>Телефон:</strong></h4>
+                    <h4>+7 (978) 7273060</h4>
+                    <h4>+7 (978) 7273070</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="row">
+                <div class="col-2">
+                  <i class="far fa-clock"></i>
+                </div>
+                <div class="col-10">
+                  <div class="contacts-box">
+                    <h4><strong>Время работы:</strong></h4>
+                    <h4>Вт-Сб: 8:00-17:00</h4>
+                    <h4>Вс: 9:00-15:00</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </section>
+    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Adf4a16c1b56e3dc05ad5c22c2c8ba768c71d100ff6195709fe2b61ded6dc2efc&amp;source=constructor" width="100%" height="420" frameborder="0"></iframe>
+
+{% endblock %}

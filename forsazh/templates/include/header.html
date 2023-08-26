@@ -1,0 +1,64 @@
+<section class="top-inf">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-sm-12" >
+              <h1 style="margin-bottom: 0;">Форсаж</h1>
+              <h5 style="margin-top: 0;"><strong>мото-веломагазин</strong></h5>
+            </div>
+            <div class="col-lg-9 col-sm-12">
+                <div class="row">
+                    <div class="col-lg-6 col-sm-12">
+                        <h6><i class="fa fa-phone"></i> +7 (978) 7273060 | +7 (978) 7273070</h6>
+                    </div>
+                    <div class="col-lg-6 col-sm-12">
+                        <h6><i class="fas fa-map-marker-alt"></i> г. Бахчисарай ул. Македонского 11</h6>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>
+</section>
+<nav class="navbar navbar-expand-md navbar-dark sticky-top">
+    <div class="container">
+        <!--<a href="#" class="navbar-brand">Audi</a>-->
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarMenu">
+            <ul class="navbar-nav m-auto">
+                <li class="nav-item">
+                    <a href="{% url 'index' %}">Главная</a>
+                </li>
+                <!--<li class="nav-item">
+                    <a href="shop.html">Магазин</a>
+                </li>-->
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="shop.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Категории
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    {% for category in categories %}
+                    <a class="dropdown-item" href="{{ category.url }}">{{ category.name }}</a>
+                    {% endfor %}
+                    <!-- <a class="dropdown-item" href="#">Мопеды</a>
+                    <a class="dropdown-item" href="#">Скутеры</a>
+                    <a class="dropdown-item" href="#">Квадроциклы</a>
+                    <a class="dropdown-item" href="#">Питбайки</a>
+                    <a class="dropdown-item" href="#">Кроссовая техника</a>
+                    <a class="dropdown-item" href="#">Велосипеды</a> -->
+                  </div>
+                </li>
+                <li class="nav-item">
+                    <a href="#">О нас</a>
+                </li>
+                <li class="nav-item">
+                    <a href="write-us.html">Напишите нам</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact">Контакты</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
